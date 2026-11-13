@@ -21,6 +21,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
+    - setuptools
   run:
     - python >=${{ python_min }}
     - ipykernel
@@ -30,6 +31,9 @@ tests:
       imports:
         - ipynbname
       pip_check: false
+      python_version:
+        - ${{ python_min }}.*
+        - "*"      
 
 about:
   license: MIT
